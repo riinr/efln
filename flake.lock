@@ -29,7 +29,9 @@
       "inputs": {
         "devshell": "devshell",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1654387879,
@@ -62,23 +64,24 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1653936696,
-        "narHash": "sha256-M6bJShji9AIDZ7Kh7CPwPBPb/T7RiVev2PAcOi4fxDQ=",
-        "owner": "nixos",
+        "lastModified": 1706747148,
+        "narHash": "sha256-fOwHK+cjfYL5vo8epmbSefChzlsQx6QLjch2xezx1Rc=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ce6aa13369b667ac2542593170993504932eb836",
+        "rev": "6eeeacfaf67dd0f915b438bb3a93cfc89db06b09",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "22.05",
+        "owner": "NixOS",
+        "ref": "release-23.11",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "dsf": "dsf"
+        "dsf": "dsf",
+        "nixpkgs": "nixpkgs"
       }
     }
   },

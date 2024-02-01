@@ -1,4 +1,4 @@
-# [EFL](https://www.enlightenment.org/about#EFL) Wrapper for [Nim](https://nim-lang.org/)
+# [EFL](https://www.enlightenment.org/about#EFL) for [Nim Lang](https://nim-lang.org/)
 
 ## WIP
 

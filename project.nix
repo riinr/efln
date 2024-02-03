@@ -7,7 +7,7 @@
   files.gitignore.template."Global/Archives" = true;
   files.gitignore.template."Global/Backup"   = true;
   files.gitignore.template."Global/Diff"     = true;
-  language.c.compiler  = "gcc";
+  language.c.compiler  = "clang";
   language.c.libraries = ["enlightenment.efl"];
   language.c.includes  = ["enlightenment.efl"];
   files.cmds.nim2      = true;

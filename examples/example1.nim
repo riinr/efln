@@ -26,7 +26,9 @@ proc gui_setup(): void =
         btn.efl_gfx_hint_weight_set 1.0, 0.1
         btn.efl_event_callback_add EFL_INPUT_EVENT_CLICKED, gui_quit_cb, btn
         box.efl_pack btn
-
+  let app = efl_app_main_get()
+  let v = app.efl_app_efl_version_get()
+  echo v.major, v.minor, v.micro
 
 efl_main:
   gui_setup()

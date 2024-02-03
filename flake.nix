@@ -1,6 +1,6 @@
 {
   description = "Dev Environment";
-  inputs.nixpkgs.url  = "github:NixOS/nixpkgs/release-23.11";
+  inputs.nixpkgs.url  = "github:NixOS/nixpkgs/nixpkgs-unstable";
   inputs.dsf.url = "github:cruel-intentions/devshell-files";
   inputs.dsf.inputs.nixpkgs.follows = "nixpkgs";
 

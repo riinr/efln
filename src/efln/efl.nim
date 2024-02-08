@@ -1,3 +1,10 @@
+import ./eo.nim
+import ./ecore.nim
+
+export eo
+export ecore
+
+
 type 
   UiWinType* =  enum
     UNKNOWN         = -1,
@@ -35,8 +42,7 @@ type
   Cls*        {.header: "<Efl_Ui.h>",importc: "Efl_Class"             .} = object
   Eo*         {.header: "<Efl_Ui.h>",importc: "Eo"                    .} = object
   Error*      {.header: "<Efl_Ui.h>",importc: "Eina_Error"            .} = cint
-  Event*      {.header: "<Efl_Ui.h>",importc: "Efl_Event"             .} = object
-  EventCb*    {.header: "<Efl_Ui.h>",importc: "Efl_Event_Cb"          .} = proc (data: pointer; evt: ptr Event): void
+  EventCb*    {.header: "<Efl_Ui.h>",importc: "Efl_Event_Cb"          .} = proc (data: pointer; evt: ptr Efl_Event): void
   EventCls*   {.header: "<Efl_Ui.h>",importc: "Efl_Event_Description" .} = object
   Future*     {.header: "<Efl_Ui.h>",importc: "Eina_Future"           .} = object
   Iterator*   {.header: "<Efl_Ui.h>",importc: "Eina_Iterator"         .} = object
@@ -61,7 +67,7 @@ type
 
 type
   PCls* = ptr Cls
-  PEvt* = ptr Event
+  PEvt* = ptr Efl_Event
   PEo*  = ptr Eo
   PFut* = ptr Future
   PVal* = ptr Value
@@ -260,7 +266,7 @@ proc efl_composite_part_is*                    (eo            ): Boo       {.hea
 proc efl_event_callback_forwarder_del*         (eo; evtc; oo  ): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_event_callback_stop*                  (eo            ): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_event_freeze*                         (eo            ): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
-proc efl_event_freeze_count_get                (eo            ): cint      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
+proc efl_event_freeze_count_get*               (eo            ): cint      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_event_global_freeze*                  (              ): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_event_global_freeze_count_get*        (              ): cint      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_event_global_thaw*                    (              ): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
@@ -286,7 +292,7 @@ proc efl_task_end*                             (eo            ): void      {.hea
 proc efl_task_exit_code_get*                   (eo            ): cint      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_task_flags_get*                       (eo            ): TaskFlags {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_task_priority_get*                    (eo            ): Priority  {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
-proc efl_task_flags_set                        (eo;f:TaskFlags): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
+proc efl_task_flags_set*                       (eo;f:TaskFlags): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_task_priority_set*                    (eo;p:Priority ): void      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_task_run*                             (eo            ): Boo       {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_loop_begin*                           (eo            ): PVal      {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
@@ -319,16 +325,15 @@ proc efl_content_set*                            (eo; oo): void {.header:"<Efl_U
 proc efl_gfx_hint_size_min_set*           (eo; s: Size2D): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_gfx_hint_align_set*            (eo; x, y: float): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_gfx_hint_weight_set*           (eo; x, y: float): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
-proc efl_exit*                           (exitCode: cint): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_text_markup_set*                       (eo; txt): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_text_set*                              (eo; txt): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_ui_win_autodel_set*                    (eo; boo): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_ui_win_type_set*                       (eo; uit): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 proc efl_text_interactive_selection_allowed_set*(eo; boo): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
-proc efl_event_callback_add*       (
+proc efl_event_callback_add* (
   eo;
   evtc;
-  cb: proc (data: pointer, evt: Event){.cdecl.};
+  cb: proc (data: pointer; evt: Efl_Event) {.cdecl.};
   o: PEo): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
 
 proc size2D*    (w: cint; h: cint): Size2D     {.header:"<Efl_Ui.h>",nodecl,importc:"EINA_SIZE2D".}
@@ -339,6 +344,6 @@ template efl_main*(): void =
 
 
 template efl_main*(body: untyped): void =
-  proc efl_main(data: pointer; evt: Event): void {.exportc: "efl_main".} =
+  proc efl_main(data: pointer; evt: Efl_Event): void {.exportc: "efl_main".} =
     body
   efl_main()

@@ -1,5 +1,7 @@
+import efln/ecore
 import efln/efl
 export efl
+export ecore
 
 ## {.push discardable .}
 template add*(eo; cls; name: untyped; body: untyped) =

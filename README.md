@@ -8,7 +8,7 @@ Install [nix](https://nixos.org/)
 
 ```
 nix develop -c $SHELL
-
+# them
 example 1
 ```
 

@@ -287,40 +287,40 @@ else:
     hint("Declaration of " & "structeolianevent" &
         " already exists, not redeclaring")
 type
-  Eolianstate_788529503 = structeolianstate ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:71:30
-  Eolianobject_788529506 = structeolianobject ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:79:31
-  Eolianclass_788529508 = structeolianclass ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:85:30
-  Eolianfunction_788529510 = structeolianfunction ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:91:33
-  Eolianpart_788529512 = structeolianpart ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:97:29
-  Eoliantype_788529514 = structeoliantype ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:103:29
-  Eoliantypedecl_788529516 = structeoliantypedecl ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:109:33
-  Eolianfunctionparameter_788529518 = structeolianfunctionparameter ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:115:43
-  Eolianimplement_788529520 = structeolianimplement ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:121:34
-  Eolianconstructor_788529522 = structeolianconstructor ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:127:36
-  Eolianevent_788529524 = structeolianevent ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:133:30
-  Eolianexpression_788529526 = structeolianexpression ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:139:35
-  Eolianconstant_788529528 = structeolianconstant ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:145:33
-  Eolianerror_788529530 = structeolianerror ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:151:30
-  Eolianstructtypefield_788529532 = structeolianstructtypefield ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:157:42
-  Eolianenumtypefield_788529534 = structeolianenumtypefield ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:163:40
-  Eoliandocumentation_788529536 = structeoliandocumentation ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:169:38
-  Eolianunit_788529538 = structeolianunit ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:175:29
+  Eolianstate_788529503 = structeolianstate ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:71:30
+  Eolianobject_788529506 = structeolianobject ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:79:31
+  Eolianclass_788529508 = structeolianclass ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:85:30
+  Eolianfunction_788529510 = structeolianfunction ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:91:33
+  Eolianpart_788529512 = structeolianpart ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:97:29
+  Eoliantype_788529514 = structeoliantype ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:103:29
+  Eoliantypedecl_788529516 = structeoliantypedecl ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:109:33
+  Eolianfunctionparameter_788529518 = structeolianfunctionparameter ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:115:43
+  Eolianimplement_788529520 = structeolianimplement ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:121:34
+  Eolianconstructor_788529522 = structeolianconstructor ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:127:36
+  Eolianevent_788529524 = structeolianevent ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:133:30
+  Eolianexpression_788529526 = structeolianexpression ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:139:35
+  Eolianconstant_788529528 = structeolianconstant ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:145:33
+  Eolianerror_788529530 = structeolianerror ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:151:30
+  Eolianstructtypefield_788529532 = structeolianstructtypefield ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:157:42
+  Eolianenumtypefield_788529534 = structeolianenumtypefield ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:163:40
+  Eoliandocumentation_788529536 = structeoliandocumentation ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:169:38
+  Eolianunit_788529538 = structeolianunit ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:175:29
   Eolianpaniccb_788529540 = proc (a0: ptr Eolianstate_788529505; a1: cstring): void {.
-      cdecl.}                ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:186:16
+      cdecl.}                ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:186:16
   Eolianerrorcb_788529542 = proc (a0: ptr Eolianobject_788529507; a1: cstring;
-                                  a2: pointer): void {.cdecl.} ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:187:16
-  Eolianobjecttype_788529546 = enumeolianobjecttype_788529545 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:207:3
-  Eolianfunctiontype_788529550 = enumeolianfunctiontype_788529549 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:217:3
-  Eolianparameterdirection_788529554 = enumeolianparameterdirection_788529553 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:225:3
-  Eolianclasstype_788529565 = enumeolianclasstype_788529564 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:234:3
-  Eolianobjectscope_788529569 = enumeolianobjectscope_788529568 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:242:3
-  Eoliantypedecltype_788529573 = enumeoliantypedecltype_788529572 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:252:3
-  Eoliantypetype_788529577 = enumeoliantypetype_788529576 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:264:3
-  Eoliantypebuiltintype_788529581 = enumeoliantypebuiltintype_788529580 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:335:3
-  Eolianexpressiontype_788529585 = enumeolianexpressiontype_788529584 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:355:3
-  Eolianexpressionmask_788529589 = enumeolianexpressionmask_788529588 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:372:3
+                                  a2: pointer): void {.cdecl.} ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:187:16
+  Eolianobjecttype_788529546 = enumeolianobjecttype_788529545 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:207:3
+  Eolianfunctiontype_788529550 = enumeolianfunctiontype_788529549 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:217:3
+  Eolianparameterdirection_788529554 = enumeolianparameterdirection_788529553 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:225:3
+  Eolianclasstype_788529565 = enumeolianclasstype_788529564 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:234:3
+  Eolianobjectscope_788529569 = enumeolianobjectscope_788529568 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:242:3
+  Eoliantypedecltype_788529573 = enumeoliantypedecltype_788529572 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:252:3
+  Eoliantypetype_788529577 = enumeoliantypetype_788529576 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:264:3
+  Eoliantypebuiltintype_788529581 = enumeoliantypebuiltintype_788529580 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:335:3
+  Eolianexpressiontype_788529585 = enumeolianexpressiontype_788529584 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:355:3
+  Eolianexpressionmask_788529589 = enumeolianexpressionmask_788529588 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:372:3
   unioneolianvalueunion_788529591 {.union, bycopy.} = object
-    c*: cschar               ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:374:9
+    c*: cschar               ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:374:9
     b*: Einabool_788529594
     s*: cstring
     i*: cint
@@ -333,21 +333,21 @@ type
     d*: cdouble
 
   Einabool_788529593 = uint8 ## Generated based on /nix/store/xc770dfs128024fx14940by3pa1w1c07-efl-1.27.0/include/eina-1/eina/eina_types.h:527:23
-  Eolianvalueunion_788529595 = unioneolianvalueunion_788529592 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:387:3
+  Eolianvalueunion_788529595 = unioneolianvalueunion_788529592 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:387:3
   structeolianvalue_788529597 {.pure, inheritable, bycopy.} = object
-    typefield*: Eolianexpressiontype_788529586 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:389:16
+    typefield*: Eolianexpressiontype_788529586 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:389:16
     value*: Eolianvalueunion_788529596
 
-  Eolianvalue_788529599 = structeolianvalue_788529598 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:393:3
-  Eolianbinaryoperator_788529603 = enumeolianbinaryoperator_788529602 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:420:3
-  Eolianunaryoperator_788529607 = enumeolianunaryoperator_788529606 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:431:3
-  Eoliandoctokentype_788529611 = enumeoliandoctokentype_788529610 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:443:3
+  Eolianvalue_788529599 = structeolianvalue_788529598 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:393:3
+  Eolianbinaryoperator_788529603 = enumeolianbinaryoperator_788529602 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:420:3
+  Eolianunaryoperator_788529607 = enumeolianunaryoperator_788529606 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:431:3
+  Eoliandoctokentype_788529611 = enumeoliandoctokentype_788529610 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:443:3
   structeoliandoctoken_788529613 {.pure, inheritable, bycopy.} = object
-    typefield*: Eoliandoctokentype_788529612 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:445:16
+    typefield*: Eoliandoctokentype_788529612 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:445:16
     text*: cstring
     textend*: cstring
 
-  Eoliandoctoken_788529615 = structeoliandoctoken_788529614 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:449:3
+  Eoliandoctoken_788529615 = structeoliandoctoken_788529614 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:449:3
   Einaiterator_788529617 = structeinaiterator_788529622 ## Generated based on /nix/store/xc770dfs128024fx14940by3pa1w1c07-efl-1.27.0/include/eina-1/eina/eina_iterator.h:126:31
   Einalist_788529619 = structeinalist_788529624 ## Generated based on /nix/store/xc770dfs128024fx14940by3pa1w1c07-efl-1.27.0/include/eina-1/eina/eina_list.h:304:38
   structeinaiterator_788529621 {.pure, inheritable, bycopy.} = object
@@ -985,9 +985,9 @@ else:
 when not declared(Eolianfileformatversion):
   when 1 is static:
     const
-      Eolianfileformatversion* = 1 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:62:9
+      Eolianfileformatversion* = 1 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:62:9
   else:
-    let Eolianfileformatversion* = 1 ## Generated based on /nix/store/hjpp5w0cj07m4awf99rgi486zqjvap4m-devshell-dir/include/eolian-1/Eolian.h:62:9
+    let Eolianfileformatversion* = 1 ## Generated based on /nix/store/8z4mh0y18zbhq7h89ihb4zp5cpda31n6-devshell-dir/include/eolian-1/Eolian.h:62:9
 else:
   static :
     hint("Declaration of " & "Eolianfileformatversion" &

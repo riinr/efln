@@ -1,4 +1,15 @@
-import efln
+import efln/efl
+
+proc efl_exit* (exitCode: cint): void {.header:"<Efl_Ui.h>",nodecl,importc:"$1".}
+
+## {.push discardable .}
+template add*(eo; cls; name: untyped; body: untyped) =
+  block:
+    let o_ref = efl_add_ref(cls, eo)
+    let name {.inject.} = o_ref
+    body
+    efl_unref o_ref
+## {.pop.}
 
 proc gui_quit_cb*(data: pointer; evt: Efl_Event): void {.exportc: "gui_quit_cb", cdecl.} =
   efl_exit(0.cint)
@@ -9,7 +20,7 @@ proc gui_setup(): void =
     win.efl_ui_win_type_set BASIC
     win.efl_text_set "Hello World".cstring
     win.efl_ui_win_autodel_set EINA_TRUE
-    win.efl_event_callback_add EFL_UI_WIN_EVENT_DELETE_REQUEST, gui_quit_cb, cast[ptr Eo](nil)
+    win.efl_event_callback_add EFL_UI_WIN_EVENT_DELETE_REQUEST, gui_quit_cb, cast[ptr efl.Eo](nil)
     win.add EFL_UI_BOX_CLASS, box:
       win.efl_content_set box
       box.efl_gfx_hint_size_min_set size2D(360, 240)

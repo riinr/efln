@@ -1,11 +1,12 @@
-{ pkgs, extraModulesPath ? ./., ... }:
+{ pkgs, lib, extraModulesPath ? ./., ... }:
 let
-  elibs = 
-    "eina eolian ecore ecore-audio ecore-con ecore-drm2 ecore-evas ecore-fb"     +
-    "ecore-file ecore-imf ecore-imf-evas ecore-input ecore-input-evas ecore-ipc" +
-    "ecore-sdl ecore-wl2 ecore-x edje eet eeze efl efl-canvas-wl efreet eio"     +
-    "eldbus elementary elput elua embryo emile emotion eo ethumb ethumb-client"  +
-    "evas";
+  eheaders = 
+    "Eina Eolian Ecore Ecore_Audio Ecore_Con Ecore_Drm2 Ecore_Evas Ecore_Fb "    +
+    "Ecore_File Ecore_Imf Ecore_Imf_Evas Ecore_Input Ecore_Input_Evas Ecore_Ipc "+
+    "Ecore_Sdl Ecore_Wl2 Ecore_X Edje Eet Eeze Efl Efl_Canvas_Wl Efreet Eio "    +
+    "Eldbus Elementary Elput Elua Embryo Emile Emotion Eo Ethumb Ethumb_Client " +
+    "Evas";
+  elibs = builtins.replaceStrings ["_"] ["-"] (lib.strings.toLower eheaders);
 in
 {
   imports =  [
@@ -20,14 +21,19 @@ in
   language.c.includes  = ["enlightenment.efl" "glibc.dev" "libclang.dev" "clang"];
   files.cmds.nim2      = true;
   files.cmds.luajit    = true;
-  files.alias.rehead  = ''
-    HEADER_NAME=''${1:-eolian}
-    cat - << EOF > /tmp/reheader.nim
+  files.alias.rehead-a = ''
+    echo "${eheaders}"|xargs -t -r -E " " -n 1 rehead
+  '';
+  files.alias.rehead   = ''
+    HEADER_NAME=''${1:-Eolian}
+    MODULE_NAME=$(echo ''${HEADER_NAME,,}|tr '-' '_')
+    LIB_NAME=$(echo ''${HEADER_NAME,,}   |tr '_' '-')
+    cat - << EOF > /tmp/reheader_$MODULE_NAME.nim
     import futhark
     importc:
-      outputPath "$PRJ_ROOT/src/efln/$HEADER_NAME.nim"
+      outputPath "$PRJ_ROOT/src/efln/$MODULE_NAME.nim"
       compilerarg "-Wp,$(pkg-config --cflags-only-I ${elibs}|tr ' ' ',')"
-      "$DEVSHELL_DIR/include/$HEADER_NAME-1/''${HEADER_NAME^}.h"
+      "$DEVSHELL_DIR/include/$LIB_NAME-1/''${HEADER_NAME}.h"
     EOF
     export PATH=~/.nimble/bin:$PATH
     nim r \
@@ -35,7 +41,7 @@ in
       --maxLoopIterationsVM:10000000000\
       --passC:"$(pkg-config --cflags ${elibs}) -DEFL_BETA_API_SUPPORT" \
       --passL:"$(pkg-config --libs   ${elibs})" \
-      -o:/tmp/reheader /tmp/reheader.nim
+      -o:/tmp/reheader_$MODULE_NAME /tmp/reheader_$MODULE_NAME.nim
   '';
   files.alias.example  = ''
     nim r --noMain:on \

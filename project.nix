@@ -29,18 +29,20 @@ in
     MODULE_NAME=$(echo ''${HEADER_NAME,,}|tr '-' '_')
     LIB_NAME=$(echo ''${HEADER_NAME,,}   |tr '_' '-')
     cat - << EOF > /tmp/reheader_$MODULE_NAME.nim
-    import futhark
+    import futhark, std/strutils
+    proc renamer(n, k: string, p = ""): string = n.replace("_", "0")
     importc:
+      renameCallback renamer
       outputPath "$PRJ_ROOT/src/efln/$MODULE_NAME.nim"
       compilerarg "-Wp,$(pkg-config --cflags-only-I ${elibs}|tr ' ' ',')"
       "$DEVSHELL_DIR/include/$LIB_NAME-1/''${HEADER_NAME}.h"
     EOF
     export PATH=~/.nimble/bin:$PATH
     nim r \
-      -d:futharkRebuild \
       --maxLoopIterationsVM:10000000000\
       --passC:"$(pkg-config --cflags ${elibs}) -DEFL_BETA_API_SUPPORT" \
       --passL:"$(pkg-config --libs   ${elibs})" \
+      -d:futharkRebuild -d:generateInline\
       -o:/tmp/reheader_$MODULE_NAME /tmp/reheader_$MODULE_NAME.nim
   '';
   files.alias.example  = ''
